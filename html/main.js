@@ -33,7 +33,9 @@ function toggleAllInsider() {
     
     http.onload = () => {
         const obj = JSON.parse(http.responseText);
+
         var insiderTable = document.getElementById("insiderTable");
+        var tButton = document.getElementById("toggleInsider");
 
         if(insiderTable.style.display == "" || insiderTable.style.display == "none") {
             obj.forEach(row => {
@@ -49,6 +51,7 @@ function toggleAllInsider() {
             });
 
             insiderTable.style.display = "block";
+            tButton.innerHTML = "Alle Insider verstecken"
         }
         else {
 
@@ -60,7 +63,7 @@ function toggleAllInsider() {
             }
 
             insiderTable.style.display = "none";
-
+            tButton.innerHTML = "Alle Insider anzeigen"
         }
 
     }
