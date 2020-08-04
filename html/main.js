@@ -22,3 +22,48 @@ function getInsider() {
     }
 
 }
+
+
+
+function toggleAllInsider() {
+    const http = new XMLHttpRequest();
+
+    http.open("GET", "allInsider");
+    http.send();
+    
+    http.onload = () => {
+        const obj = JSON.parse(http.responseText);
+        var insiderTable = document.getElementById("insiderTable");
+
+        if(insiderTable.style.display == "" || insiderTable.style.display == "none") {
+            obj.forEach(row => {
+                var rowT = insiderTable.insertRow(1);
+
+                var insider   = rowT.insertCell(0);
+                var author    = rowT.insertCell(1);
+                var timestamp = rowT.insertCell(2);
+
+                insider.innerHTML   = row.value;
+                author.innerHTML    = row.author;
+                timestamp.innerHTML = row.timestamp;
+            });
+
+            insiderTable.style.display = "block";
+        }
+        else {
+
+            var rowsL = insiderTable.rows.length;
+
+            for(var i = rowsL - 1; i >= 1; i--) {
+                console.log(insiderTable.rows[i]);
+                insiderTable.deleteRow(i);
+            }
+
+            insiderTable.style.display = "none";
+
+        }
+
+    }
+
+
+}

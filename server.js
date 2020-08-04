@@ -24,6 +24,17 @@ app.get('/getInsider', (req, res) => {
 });
 
 
+app.get('/allInsider', (req, res) => {
+
+    // query All
+    let findAll = `SELECT value, author, timestamp FROM insider`;
+
+    db.execQuery(findAll, [], (rows) => {
+        res.send(rows);
+    });
+});
+
+
 
 
 

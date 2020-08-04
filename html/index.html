@@ -846,9 +846,15 @@ th {
 h1,
 h2,
 h3,
-h4
+h4,
+th,
+td
 {
     text-align: center;
+}
+
+#insiderTable {
+    display: none;
 }
 
 .btnwrp {
@@ -910,4 +916,4 @@ h4
 </style><script type="text/javascript" src="main.js"></script><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></head><body><div class="container"><br><div class="row"><div class="twelve columns"><h2>Random Insider</h2></div></div><br><br><section class="ArticleCopy">
 <blockquote>
 <p id="insider">"Hier könnte Ihr Insider stehen"</p>
-</blockquote><p id="author">- Author, Timestamp</p></section><br><br><hr><div class="btnwrp"><a class="button button-primary" href="#" onclick="getInsider()">Neuer Insider</a></div></div></body></html>
+</blockquote><p id="author">- Author, Timestamp</p></section><br><br><hr><div class="btnwrp"><a class="button button-primary" href="#" onclick="getInsider()">Neuer Insider</a></div><br><br><hr><div class="btnwrp"><a class="button button-primary" href="#" onclick="toggleAllInsider()">Alle Insider anzeigen</a></div><table style="width:100%" border="1" id="insiderTable"><tr>   <th>Insider</th><th>Author</th><th>Timestamp</th></tr></table></div></body></html>
