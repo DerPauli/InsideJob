@@ -1,0 +1,30 @@
+doctype html
+html(lang="de")
+    head
+        title='Insiders Generator'
+        style
+            include skeleton.css
+            include normalize.css
+            include style.css
+
+        script(type='text/javascript' src='main.js')
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    body
+        div(class="container")
+            br
+            div(class="row")
+                div(class="twelve columns")
+                    h2 Random Insider
+            br
+            br
+            <section class="ArticleCopy">
+                <blockquote>
+                    <p id="insider">"Hier könnte Ihr Insider stehen"</p>
+                </blockquote>
+            p(id="author") - Author, Timestamp
+            </section>
+            br
+            br
+            hr
+            div(class="btnwrp")
+                a(class="button button-primary" href="#" onclick="getInsider()") Neuer Insider

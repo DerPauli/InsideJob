@@ -1,0 +1,27 @@
+{
+  "name": "insidejob",
+  "version": "1.0.0",
+  "description": "Inside Jokes kept in a database which can be access at random.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DerPauli/InsideJob.git"
+  },
+  "author": "Paul Merker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DerPauli/InsideJob/issues"
+  },
+  "homepage": "https://github.com/DerPauli/InsideJob#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "random": "^2.2.0",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "pug": "^3.0.0"
+  }
+}
