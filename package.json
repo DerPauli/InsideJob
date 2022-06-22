@@ -19,7 +19,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "random": "^2.2.0",
-    "sqlite3": "^5.0.0"
+    "sqlite3": "^5.0.3"
   },
   "devDependencies": {
     "pug": "^3.0.0"
